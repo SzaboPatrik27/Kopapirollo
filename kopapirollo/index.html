@@ -11,17 +11,17 @@
     <h1>Kő - Papír - Olló</h1>
     <h2>Válassz!</h2>
     <div>
-        <img class="ko" onclick="jatek('ko')" src="/kopapirollo/img/ko.png" alt="Kő">
-        <img src="/kopapirollo/img/papir.png" onclick="jatek('papir')" alt="Papír">
-        <img src="/kopapirollo/img/ollo.png" onclick="jatek('ollo')" alt="Olló">
+        <img id="ko" onclick="jatek('ko')" src="/kopapirollo/img/ko.png" alt="Kő">
+        <img id="papir"src="/kopapirollo/img/papir.png" onclick="jatek('papir')" alt="Papír">
+        <img id="ollo" src="/kopapirollo/img/ollo.png" onclick="jatek('ollo')" alt="Olló">
     </div>
     <h1>Gép választása</h1>
-    <img class="kepek" src="/kopapirollo/img/ollo.png" alt="Olló">
-    <h1>Eredmény: Te nyertél!</h1>
+    <img id="gepValasztott" class="kepek" src="/kopapirollo/img/ollo.png" alt="Olló">
+    <h1 id="eredmeny">Eredmény: Te nyertél!</h1>
     <p>Te pontod</p>
-    <p class="pontok">2</p>
+    <p id="userPoint" onclick="jatek('userPoint')" >2</p>
     <p>Gép pontja</p>
-    <p class="pontok">8</p>
+    <p id="computerPoint" onclick="jatek('computerPoint')">8</p>
     </div>
     <script src="script.js"></script>
 </body>

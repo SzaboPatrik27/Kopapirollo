@@ -10,8 +10,8 @@ img{
     width: 100px;
     
 }
-.ko{
-    border: solid red 4px;
+#ko,#papir,#ollo{
+    border: solid red 0px;
 }
 .pontok{
     color: red;
