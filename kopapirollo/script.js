@@ -23,9 +23,9 @@ document.getElementById("gepValasztott").src = `img/${computerChoice}.png`
 console.log(computerChoice)
 
 
-if((userChoice == "ko" && computerChoice =="papir")
-    ||(userChoice =="papir" && computerChoice =="ollo")
-    ||(userChoice =="ollo" && computerChoice == "papir")
+if((userChoice == "papir" && computerChoice =="ko")
+    ||(userChoice =="ollo" && computerChoice =="papir")
+    ||(userChoice =="ko" && computerChoice == "ollo")
 )
 {
 userPoint++
@@ -36,9 +36,9 @@ document.getElementById("eredmeny").innerHTML = "Eredmény:Te nyertél"
 
 
 
-else if(userChoice =="papir" && computerChoice =="ollo"
-    || userChoice =="ollo" && computerChoice =="ko"
-    ||userChoice == "ko" && computerChoice =="papir"
+else if((userChoice =="papir" && computerChoice =="ollo")
+    || (userChoice =="ollo" && computerChoice =="ko")
+    ||(userChoice == "ko" && computerChoice =="papir")
 
 )
 {
@@ -51,12 +51,24 @@ else{
     console.log("Döntetlen")
     document.getElementById("eredmeny").innerHTML = "Eredmény:Döntetlen"
 }
+if(userPoint == 10 || computerPoint == 10){
+    if(userPoint == 10){
+        document.getElementById("eredmeny").innerHTML = "Játék vége. Te nyertél. \nMég egy játszma?"
+        document.getElementById("ko").onclick = null
+        document.getElementById("papir").onclick = null
+        document.getElementById("ollo").onclick = null
+    }
+    else{
+        document.getElementById("eredmeny").innerHTML = "Játék vége. A gép nyert. \nMég egy játszma?"
+        document.getElementById("ko").onclick = null
+        document.getElementById("papir").onclick = null
+        document.getElementById("ollo").onclick = null
+        
+    }
+
+    
+}
 
 }
-if(userPoint == 10){
-    document.getElementById("eredmeny").innerHTML = "Játék vége:Te nyertél"
-}
-else{
-    document.getElementById("eredmeny").innerHTML = "Játék vége:A gép nyert"
-}
+
 
