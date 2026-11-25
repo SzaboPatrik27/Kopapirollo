@@ -70,5 +70,13 @@ if(userPoint == 10 || computerPoint == 10){
 }
 
 }
-
+function ujrakezdes(){
+if(ujragomb.onclick){
+userPoint = 0
+computerPoint = 0
+document.getElementById(userPoint).innerHTML = userPoint
+document.getElementById(computerPoint).innerHTML = computerPoint
+}
+    
+}
 

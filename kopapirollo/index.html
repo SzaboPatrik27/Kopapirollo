@@ -8,15 +8,24 @@
 </head>
 <body>
     <div class="egesz">
+    <h1>Regisztrálj!</h1>
+    <label for="felhasznalonev">Add meg a felhasználóneved</label>
+    <input type="text" id="felhasznalonev" name="username" required>
+    <label for="jelszo">Add meg a jelszavad</label>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Legalább 8 karakternek,egy szémnak,egy nagybetűnek és egy speciális karakternek kell szerepelnie">
+    <label for="jelszo">Add meg a jelszavad újra</label>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Legalább 8 karakternek,egy szémnak,egy nagybetűnek és egy speciális karakternek kell szerepelnie">
+    <button id="regisztracio">Regisztrálás</button>
+
     <h1>Kő - Papír - Olló</h1>
     <h2>Válassz!</h2>
     <div>
-        <img id="ko" onclick="jatek('ko')" src="/kopapirollo/img/ko.png" alt="Kő">
-        <img id="papir"src="/kopapirollo/img/papir.png" onclick="jatek('papir')" alt="Papír">
-        <img id="ollo" src="/kopapirollo/img/ollo.png" onclick="jatek('ollo')" alt="Olló">
+        <img id="ko" onclick="jatek('ko')" src="/img/ko.png" alt="Kő">
+        <img id="papir"src="/img/papir.png" onclick="jatek('papir')" alt="Papír">
+        <img id="ollo" src="/img/ko.png" onclick="jatek('ollo')" alt="Olló">
     </div>
     <h1>Gép választása</h1>
-    <img id="gepValasztott" class="kepek" src="/kopapirollo/img/ollo.png" alt="Olló">
+    <img id="gepValasztott" class="kepek" src="/img/ollo.png" alt="Olló">
     <h1 id="eredmeny">Eredmény: Te nyertél!</h1>
     <p>Te pontod</p>
     <p id="userPoint" onclick="jatek('userPoint')" >2</p>
@@ -24,7 +33,7 @@
     <p id="computerPoint" onclick="jatek('computerPoint')">8</p>
     </div>
     <div class="gomb">
-        <button id="ujrakezdes"></button>
+        <button onclick="ujrakezdes()" id="ujragomb"></button>
     </div>
     <script src="script.js"></script>
 </body>
